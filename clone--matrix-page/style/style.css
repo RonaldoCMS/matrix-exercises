@@ -1,0 +1,86 @@
+body {
+    /*
+    */
+    font-family: "Work Sans", "Helvetica Neue", "Lucida Grande", Arial, Verdana, sans-serif;
+
+}
+
+.title {
+    margin-left: 2%;
+}
+
+.index-link {
+    color: white;
+    position: relative;
+    display: table;
+    width: 100%;
+    height: auto;
+    padding: 200px 0;
+    table-layout: fixed;
+    background: linear-gradient(90deg,  grey, black);
+}
+
+.logo img {
+    width: 220px;
+    height: 72.188px;
+}
+
+hr.divider-link {
+    width: 10%;
+}
+
+
+img.iso-certificate {
+    width: 122px;
+    height: 56px;
+}
+
+p.title-link {
+    font-size: 2rem;
+    color: #111111
+}
+
+p.subtitle-link {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.main-links {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-links {
+    background-color: transparent;
+    border-radius: 25px;
+    margin: 2%;
+    padding: 2%;
+    width: 100%;
+    border-color: white;
+    border-width: 2px;
+    font-size: 100%;
+    color: white;
+}
+
+
+
+.div-link {
+    background: white;
+}
+
+input[type="text"], input[type="email"] {
+    padding: 8px;
+    width: 100%;
+    margin-top: 8px;
+}
+
+textarea {
+    width: 100%;
+}
+
+fabio {
+    color: red;
+}
