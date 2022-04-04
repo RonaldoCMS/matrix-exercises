@@ -4,10 +4,15 @@ document.getElementById("list_numbers").value = "0,1,2,3,4,5";
 
 function _getValues(values) {
    try {
-    return `positivi : ${outPositivesValue(values)} <br>
-    negativi : ${outNegativesValue(values)} <br>
-    pari : ${outEvensValue(values)} <br>
-    dispari ${outOddesValue(values)} <br>
+    return `
+    positivi : <b> ${outPositivesValue(values)} </b>    <br>
+    negativi : <b> ${outNegativesValue(values)} </b>    <br>
+    pari :     <b> ${outEvensValue(values)}     </b>    <br>
+    dispari :  <b> ${outOddesValue(values)}     </b>    <br>
+    Massimo :  <b> ${outMaxValue(values)}       </b>    <br>
+    Minimo :   <b> ${outMinValue(values)}       </b>    <br>
+    Media :    <b> ${outMediaValue(values)}     </b>    <br>
+    Sum :      <b> ${outSumValue(values)}       </b>    <br>
     `
    } catch(error) {
        throw error;
@@ -18,7 +23,7 @@ function getTimesValue(values) {
     const isActiveSearchTimes = isANumber(document.getElementById("input-times").value);
     if(isActiveSearchTimes) {
         const times =  parseInt(document.getElementById("input-times").value);
-      return `doppioni ${searchAndOutputTimesValue(values, times)}`;
+        return ` <b> doppioni ${searchAndOutputTimesValue(values, times)} </b>`;
     }
     return '';
 }

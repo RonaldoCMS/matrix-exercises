@@ -57,6 +57,11 @@ function _controllExceptions(array, num = undefined) {
   }
 }
 
+function _controllAndRunMethod(array, callback) {
+  _controllExceptions(array);
+  callback();
+}
+
 function _formulePositiveOrNegative(value, isPositive) {
   return isPositive ? value >= 0 : value < 0;
 }
@@ -65,59 +70,135 @@ function _formuleIsEvenOrOdd(value, isEven) {
   return isEven ? value % 2 == 0 : value % 2 == 1;
 }
 
+function formulePositiveValue(value) {
+  return _formulePositiveOrNegative(value, true);
+}
+
+function formuleNegativeValue(value) {
+  return _formulePositiveOrNegative(value, false);
+}
+
+function formuleEvenValue(value) {
+  return _formuleIsEvenOrOdd(value, true);
+}
+
+function formuleOddValue(value) {
+  return _formuleIsEvenOrOdd(value, false);
+}
+
 function _cycleNumbers(array, callback) {
   for (var i = 0; i < array.length; i++) {
     callback(array[i]);
   }
 }
 
-function _searchAndOutputGeneric(array, boolean, type, num=undefined) {
-  
-  try {
-    _controllExceptions(array);
-    console.log(array);
-  } catch (error) {
-    console.error(error);
-    throw error;
+function _max(number, myValue) {
+  if(number >= myValue) {
+   return number;
   }
+  return myValue;
+}
 
-  var counter = 0;
-  _cycleNumbers(array, (value) => {
-    if(_incrementCounter(value, type, boolean, num)) {
-      counter++;
-    }
+function _min(number, myValue) {
+  if(number < myValue) {
+   return number;
+  }
+  return myValue;
+}
+
+
+outEvensValue = (array) => {
+  let evens = 0;
+  _controllAndRunMethod(array, () => {
+    _cycleNumbers(array, (value) => {
+      if(formuleEvenValue(value)) {
+        evens++;
+      }
+    });
   });
-  return counter;
+  return evens;
 }
 
-function _incrementCounter(value, type=undefined, boolean=undefined, num=undefined) {
-  console.log("START");
-  if(num != undefined) {
-    if(value == num) return true;
-  } else {
-    switch (type) {
-      case 0:
-        return _formuleIsEvenOrOdd(value, boolean);
-      case 1:
-        return _formulePositiveOrNegative(value, boolean);
-      default:
-        return false;
-    }
-  }
+outOddesValue = (array) => { 
+  let oddes = 0;
+  _controllAndRunMethod(array, () => {
+    _cycleNumbers(array, (value) => {
+      if(formuleOddValue(value)) {
+        oddes++;
+      }
+    });
+  });
+  return oddes;
 }
 
- function _searchAndOutputEvensOrOddValue(array, isEven) {
- return _searchAndOutputGeneric(array, isEven, 0);
+outPositivesValue = (array) =>{ 
+  let positives = 0;
+  _controllAndRunMethod(array, () => {
+    _cycleNumbers(array, (value) => {
+      if(formulePositiveValue(value)) {
+        positives++;
+      }
+    });
+  });
+  return positives;
 }
- 
- function _searchAndOutputPositivesOrNegativesValue(array, isPos) {
-  return _searchAndOutputGeneric(array, isPos, 1);
+
+outNegativesValue = (array) => {
+  let negatives = 0;
+  _controllAndRunMethod(array, () => {
+    _cycleNumbers(array, (value) => {
+      if(formuleNegativeValue(value)) {
+        negatives++;
+      }
+    });
+  });
+  return negatives;
 }
 
+outMaxValue = (array) => {
+  let max = array[0];
+  _controllAndRunMethod(array, () => {
+    _cycleNumbers(array, (value) => {
+      console.log("ENTER " + max);
+      max = _max(value, max);
+    });
+  });
+  return max;
+};
 
-outEvensValue = (array) => _searchAndOutputEvensOrOddValue(array, true);
-outOddesValue = (array) => _searchAndOutputEvensOrOddValue(array, false);
-outPositivesValue = (array) =>_searchAndOutputPositivesOrNegativesValue(array, true, 1);
-outNegativesValue = (array) => _searchAndOutputPositivesOrNegativesValue(array, false, 1);
-searchAndOutputTimesValue = (array, num) => _searchAndOutputGeneric(array, num=num);
+outMinValue = (array) => {
+  let min = array[0]; 
+  _controllAndRunMethod(array, () => {
+    _cycleNumbers(array, (value) => {
+      min = _min(value, min);
+    });
+  });
+  return min;
+}
 
+searchAndOutputTimesValue = (array, num) => {
+  let total = 0; 
+  _controllAndRunMethod(array, () => {
+    _cycleNumbers(array, (value) => {
+      if(value == num) {
+        total++;
+      }
+    });
+  });
+  return total;
+};
+
+outMediaValue = (array) => {
+ let total = outSumValue(array);
+ return total / array.length;
+}
+
+outSumValue = (array) => {
+  let total = 0;
+  _controllAndRunMethod(array, () => {
+    _cycleNumbers(array, (value)  => {
+      total += parseInt(value);
+    });
+  });
+  return total;
+}
