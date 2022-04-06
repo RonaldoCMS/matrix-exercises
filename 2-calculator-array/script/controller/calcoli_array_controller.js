@@ -7,12 +7,13 @@ function _getValues(values) {
     return `
     positivi : <b> ${outPositivesValue(values)} </b>    <br>
     negativi : <b> ${outNegativesValue(values)} </b>    <br>
-    pari :     <b> ${outEvensValue(values)}     </b>    <br>
-    dispari :  <b> ${outOddesValue(values)}     </b>    <br>
-    Massimo :  <b> ${outMaxValue(values)}       </b>    <br>
-    Minimo :   <b> ${outMinValue(values)}       </b>    <br>
+    Evens :     <b> ${outEvensValue(values)}     </b>    <br>
+    Oddes :  <b> ${outOddesValue(values)}     </b>    <br>
+    Max :  <b> ${outMaxValue(values)}       </b>    <br>
+    Min :   <b> ${outMinValue(values)}       </b>    <br>
     Media :    <b> ${outMediaValue(values)}     </b>    <br>
     Sum :      <b> ${outSumValue(values)}       </b>    <br>
+    Reversed :      <b> [${outReversedArray(values)}]       </b>    <br>
     `
    } catch(error) {
        throw error;
@@ -23,7 +24,7 @@ function getTimesValue(values) {
     const isActiveSearchTimes = isANumber(document.getElementById("input-times").value);
     if(isActiveSearchTimes) {
         const times =  parseInt(document.getElementById("input-times").value);
-        return ` <b> doppioni ${searchAndOutputTimesValue(values, times)} </b>`;
+        return `  doppioni <b> ${searchAndOutputTimesValue(values, times)} </b>`;
     }
     return '';
 }
