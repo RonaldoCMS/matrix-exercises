@@ -1,11 +1,11 @@
-autos = [
-    new Automobile("test", "test", "test", "test", "test", 1, 2),
-    new Automobile("test1", "test", "test", "test", "test", 1, 2),
-    new Automobile("test2", "test", "test", "test", "test", 1, 2),
-    new Automobile("test3", "test", "test", "test", "test", 1, 2),
-    new Automobile("test4", "test", "test", "test", "test", 1, 2),
+autos = [];
 
-];
+function initAutos() {
+    if(localStorage.getItem('autos') != null) { 
+        autos = JSON.parse(localStorage.getItem('autos'));
+    }
+    console.log("INIT END \t autos \t" + autos);
+}
 
 function handleAddAuto() {
     let modello = document.getElementById("idModello").value;
@@ -25,18 +25,20 @@ function handleAddAuto() {
         alert("Attenzione, il prezzo e la cilindrata non possono avere valori negativi");
     } else {
         autos.push(auto);
+        localStorage.setItem("autos", JSON.stringify(autos));
     }
-
     console.log(autos);
 }
 
 function handleViewAuto() {
+    console.log("AUTOS -> " + autos["modello"]);
         Array.from(autos).forEach((element, index) => {
+            console.log(element);
             document.getElementById("visualizzati").innerHTML += 
             ` 
             <div>
                 <p>=================</p>
-                <p>Modello : ${element.modello}</p>
+                <p>Modello : ${element["modello"]}</p>
                 <p>Marca : ${element.marca}</p>
                 <p>Targa : ${element.targa}</p>
                 <p>Colore : ${element.colore}</p>
@@ -66,10 +68,6 @@ function handleViewAuto() {
             <p> Nessuna auto inserita </p>
             `;
         }
-       
-   // }
-
-    console.log("Hello World");
 }
 
 function handleRemoveViewAuto() {
@@ -80,6 +78,8 @@ function handleRemoveAllAuto() {
     let result = confirm("Sicuro?");
     if(result) {
         autos = [];
+        localStorage.setItem("autos", JSON.stringify(autos));
+
         handleRemoveViewAuto();
     }
 }
@@ -90,6 +90,8 @@ function handleDeleteAuto(index) {
 
     if(result) {
         autos.splice(index, 1);
+        localStorage.setItem("autos", JSON.stringify(autos));
+
         console.log(autos);
         handleRemoveViewAuto();
         handleViewAuto();
