@@ -1,0 +1,23 @@
+body {
+    background-color: #867b93;
+
+}
+
+.punteggio {
+    text-align: center;
+    padding: 16px;
+    font-size: 2rem;
+    color: white;
+}
+
+input {
+    font-size: 3rem !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+
+.field {
+    width: 75px;
+    height: 75px;
+}
