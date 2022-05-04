@@ -1,6 +1,8 @@
 package com.example.model;
 
 public class Campionato {
+    private int id;
+    private String nome;
     private Squadra[] squadre;
 
     public Campionato() {

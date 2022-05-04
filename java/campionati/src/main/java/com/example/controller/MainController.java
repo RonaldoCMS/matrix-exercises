@@ -25,12 +25,12 @@ public class MainController {
        }
     }
 
-    public void handleNewGiocatore(Squadra squadra, Giocatore giocatore) {
+    /* public void handleNewGiocatore(Squadra squadra, Giocatore giocatore) {
         for(Squadra mysquadra : campionato.getSquadre()) {
             if(squadra.getNome().equalsIgnoreCase(squadra.getNome()))  {
                 mysquadra.set
             }
         }
-    }
+    } */
 
 }
