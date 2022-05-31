@@ -1,0 +1,82 @@
+.form-sizes{
+    width: 16%;
+    border: 0px;
+    border-radius: 0px;
+ }
+ 
+ .input-sizes {
+     width: 16%;
+     border: 0px;
+     border-radius: 0px;
+ }
+ 
+ .input-form-main {
+     border-top-left-radius: 0 !important;
+     border-bottom-left-radius: 0 !important;
+     font-size: 1.5rem !important;
+     height: 100% !important;
+ }
+ 
+ .form-main {
+     border-top-right-radius: 0 !important;
+     border-bottom-right-radius: 0 !important;
+     font-size: 0.9rem !important;
+     height: 100% !important;
+     background-color: #dadada  !important;
+ }
+ 
+.navbar-main {
+    background-color: #232f3e !important;
+}
+
+.navbar-sub {
+    background-color: #37475A !important;
+}
+
+.navbar-sub a{
+    font-size: 0.8em;
+    color: #FFF !important;
+}
+
+.navbar-mylogo {
+    margin: 5px;
+}
+
+.navbar-mylogo img {
+    width: 155px;
+}
+.navbar-location-img {
+    width: 15%;
+    align-items: center; 
+    display: grid; 
+    height: 100%; 
+}
+
+.navbar-location img {
+    width: 25px;
+}
+
+.navbar-info div span {
+    color: white;
+    font-weight: bold;
+    font-size: 0.8em;
+
+}
+
+.navbar-info div:first-child span {
+    color: #ccc;
+    font-weight: 200;
+
+}
+
+.navbar-more-info p {
+    color: white;
+    font-weight: bold;
+    font-size: 0.7em;
+
+}
+
+.navbar-more-info p:first-child {
+    color: #ccc;
+    font-weight: 200;
+}

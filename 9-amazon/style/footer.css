@@ -1,0 +1,49 @@
+footer {
+    background-color: #232f3e;
+    color: #FFF;
+}
+
+.return-top {
+    background-color: #37475A;
+}
+
+.return-top p {
+    font-size: 1.3em;
+    padding: 10px;
+    color: #FFF;
+    text-align: center;
+}
+
+
+.return-top:hover {
+    background-color: #43566b;
+}
+
+.footer-end {
+    background-color: #131A22;
+    text-align: center;
+}
+
+.footer-info p {
+    color: white;
+    font-weight: bold;
+
+}
+
+.footer-info a {
+    color: #ccc;
+    font-weight: 200;
+}
+
+.footer-icon {
+    text-align: center;
+}
+
+.footer-icon img {
+   width: 100px; 
+}
+
+.footer-nationals {
+    text-align: center;
+    font-size: 0.5em;
+}

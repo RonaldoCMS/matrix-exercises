@@ -1,0 +1,35 @@
+
+ 
+ .carousel-content {
+     height: 350px;
+ }
+ 
+ 
+ 
+ .box-main {
+     background-color: white;
+     margin: 10px;
+ }
+
+ .box-main h5{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.box-main a{
+    font-size: 0.6em;
+}
+
+.box-main img{
+  width: 120px;
+ 
+}
+
+.box-main .sconto {
+    background-color: red;
+}
+
+
+ 
+ 
+ 
