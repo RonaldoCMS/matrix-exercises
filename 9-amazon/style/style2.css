@@ -1,42 +1,49 @@
-a {
-    text-decoration: none;
-    color: #FFF;
-}
+@import url('https://fonts.googleapis.com/css?family=Montserrat&amp;display=swap');
 
 body {
-    background-color: #EAEDED !important;
+    background-color: #eaeded;
+    box-sizing: border-box;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+#navbar-who-wrapper {
+    display: flex;
+    
+  }
+  .navbar-who-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar-who-item {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-weight: bold;
+    font-size: 14px;
+  }
 
+  .navbar-who-item:first-child {
+    font-weight: none;
+    font-size: 12px;
+    color: #37475A;
+  }
 
+  @media (max-width: 800px) {
+    #navbar-who-wrapper {
+      flex-direction: column;
+    }
+    .navbar-who-column {
+      display: contents;
+    }
+  }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.navbar {
+    background-color: #131921;
+    border-color: #131921;
+}
 
 .no_padding{
     padding-right: 0px;
@@ -54,15 +61,63 @@ body {
     margin: 5px -5px;
 }
 
+.navbar-brand.sb_tgl {
+    border: 1px solid #6c6b6b;
+    border-radius: 3px;
+    height: 40px;
+    margin: 10px 0px 0px -12px;
+    padding: 7px 0px 0px 8px;
+    width: 34px;
+}
 
+.navbar-brand.sb_tgl:hover {
+    border: 1px solid white;
+    border-radius: 3px;
+}
 
+.navbar-brand.sb_logo {
+    height: 40px;
+    margin: 10px 0px 10px 6px;
+    padding: 7px 0px 0px 0px;
+    width: 130px;
+}
 
+.navbar-brand.sb_logo:hover {
+    border: 1px solid white;
+    border-radius: 3px;
+}
 
+.navbar-location {
+    display: flex;
+    flex-direction: row;
+    color: white;
+    text-align: center;
+}
 
+.sb_search_bar{
+    margin-top:10px;
+}
 
+.sb_search_drop{
+   height:40px;
+}
 
+.search_drop_bg_color{
+    background-color: #f3f3f3;
+    background-image: none;
+    border-left: 1px solid #f3f3f3;
+    border-top: 1px solid #f3f3f3;
+    border-bottom: 1px solid #f3f3f3;
+}
 
-
+.search_btn_bg{
+    background-color: #febd69;
+    background-image: none;
+    border: none;
+    width: 45px;
+    border-radius: 0 4px 4px 0;
+    font-size: 21px;
+}
 
 .search_bar_width{
    width: 56.333%;
@@ -296,7 +351,7 @@ body {
     height: 26px;
     background-position: -10px -340px;
     left: 18px;
-    background-image: url('assets/iconbundle.png');
+    background-image: url('../../assets/img/iconbundle.png');
     background-repeat: repeat-x;
     margin-top: 9px;
 }
@@ -343,7 +398,7 @@ body {
     height: 22px;
     background-position: -68px -340px;
     left: 18px;
-    background-image: url('assets/iconbundle.png');
+    background-image: url('../../assets/img/iconbundle.png');
     background-repeat: repeat-x;
     margin-top: 9px;
 }
@@ -766,4 +821,40 @@ body {
 }
 
 
+/* second footer section css end */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.location-icon {
+    color: white;
+}
+
+.location-main {
+    background-color: red;
+}
+
+.location-info {
+}

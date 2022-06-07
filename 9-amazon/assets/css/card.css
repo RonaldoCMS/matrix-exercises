@@ -1,0 +1,85 @@
+@import "constants.css";
+:root {
+    --min-height: 150px;
+    --max-height: 150px;
+}
+.card-body {
+    background-color: var(--background-card);
+    text-align: center;
+    min-height: 350px;
+    min-width: 300px;
+}
+
+.card-main-img {
+    max-height: var(--max-height);
+}
+
+.card-box-img {
+    max-height: var(--max-height);
+    position: relative;
+}
+
+.card-img {
+    min-height: var(--min-height);
+    max-height: var(--max-height);
+    object-fit: scale-down;
+}
+
+.card-text {
+    text-align: center;
+    bottom: 0;
+}
+
+.card-shipping {
+    padding: 8px;
+    min-height: (350 / 2)px;
+    background-color: var(--background-card);
+    margin-bottom: 8px;
+}
+.card-adv {
+    background-color: var(--background-card);
+}
+
+.card-media {
+    height: 100%;
+    background-image: url("../images/index/items/media.jpg");
+    background-size: cover;
+
+}
+
+.card-media-img {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+}
+
+.card-media-title {
+    background-color: white;
+    padding: 8px;
+    opacity: 0.3;
+    position: absolute;
+    top: 10;
+}
+
+.card-media-subtitle {
+    position: absolute;   
+    padding: 8px;
+    background-color: white;
+    opacity: 0.3;
+    bottom: 0;
+}
+
+.card-offer {
+
+}
+
+.card-offer-bordered {
+    background-color: #CC0C39;
+    color: white;
+    padding: 2px;
+}
+
+.card-offer-colored {
+    color: #CC0C39;
+    padding: 2px;
+}
+

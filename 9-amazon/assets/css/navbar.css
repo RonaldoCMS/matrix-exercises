@@ -1,0 +1,98 @@
+.navbar-color {
+    background-color: var(--background-navbar) !important;
+    border-color: var(--background-navbar) !important;
+    margin: 0px;
+}
+
+.sb_search_bar{
+    margin-top:10px;
+}
+
+.sb_search_drop{
+   height:40px;
+}
+
+
+.search_btn_bg{
+    background-color: #febd69;
+    background-image: none;
+    border: none;
+    width: 45px;
+    border-radius: 0 4px 4px 0;
+    font-size: 21px;
+}
+
+.search_bar_width{
+   width: 56.333%;
+}
+
+
+
+.cart_icon{
+    position: absolute;
+    width: 38px;
+    height: 26px;
+    background-position: -10px -340px;
+    background-image: url('../iconbundle.png');
+    background-repeat: repeat-x;
+    margin-top: 9px;
+}
+
+.cart_icon_div {
+    margin-top: 0px;
+    position: relative;
+}
+
+#nav-cart-count{
+    position: absolute;
+    color: var(--color-searchbar);
+    font-size: 16px;
+    left: 25px;
+}
+
+
+
+.nav-cart-count{
+    font-weight: 700;
+    font-family: inherit;
+    position: absolute;
+    line-height: 30px;
+    text-align: center;
+}
+
+.cart_txt_2{
+    font-size: 14px;
+    font-weight: 700;
+    color: white;
+    position: absolute;
+    padding-left: 8px;
+    margin-top: 15px;
+    margin-left: 39px;
+}
+
+.second_nav {
+    background-color: var(--background-sub-navbar);
+}
+
+.s_nav_links{
+    margin: 8px 0 0px;
+    height: 37px;
+    padding: 6px 0 0 0;
+}
+
+.s_links{
+    padding: 7px 8px 7px 8px;
+    margin: 1px 2px 12px 1px;
+    color: #ccc;
+    text-decoration: none !important;
+}
+.s_links:hover{
+    border: 1px solid;
+    border-radius: 2px;
+    border-color: #fff;
+    color: #ccc;
+    padding: 7px 8px 7px 8px;
+    margin: 1px 2px 12px 1px;
+}
+
+

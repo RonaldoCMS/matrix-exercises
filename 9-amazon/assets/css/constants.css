@@ -1,0 +1,12 @@
+:root {
+    --background-body: #eaeded;
+    --background-card: #fff;
+    --background-navbar: #131921;
+    --background-sub-navbar: #232f3e;
+    --color-searchbar: #f08804;
+}
+
+* {
+    font-size: 1.02em;
+
+}

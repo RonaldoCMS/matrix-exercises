@@ -2,134 +2,63 @@
 <html lang="en">
 <head>
 
-        
-    <link rel="stylesheet" href="style/navbar.css">
-    <link rel="stylesheet" href="style/footer.css">
-    <link rel="stylesheet" href="style/basic.css">
-
-    <link rel="stylesheet" href="style/style.css">
-
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Amazon</title>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/module.css" />
 
     <title>Amazon basic</title>
 </head>
 <body>
-    <!-- HEADER -->
-    <nav class="navbar navbar-expand-lg navbar-main">
+    <nav class="navbar navbar-expand-lg navbar-color navbar-dark bg-dark">
         <div class="container-fluid">
-        
-          <a class="navbar-brand navbar-mylogo " href="#">
-            <img src="assets/images/navbar/logo.png" alt="">
-          </a>
-          <div style="width: 180px;" class="container-fluid navbar-location">
-            <div class="row">
-                <div class="col-md-3">
-                        <div class="navbar-location-img col-md-12">
-                            <ion-icon style="color: white" name="location-outline"></ion-icon>
+            <a class="navbar-brand mb-2 p-4 h1" href="#">
+                <img src="assets/images/navbar/logo.png" alt="emart" />
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="container-fluid w-100 row">
+                    <div class="col-10">
+                        <div class="input-group sb_search">
+                            <input type="text" class="form-control sb_search_drop" name="x" >
+                            <span class="input-group-btn search_btn_bg">
+                                <button class="btn btn-default sb_search_drop search_btn_bg" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                            </span> 
                         </div>
-                </div>
-                <div class="col-md-9">
-                    <div class="row navbar-info">
-                        <div class="col-md-12 well well-sm">
-                            <span>Invia a Fabio</span>
-                        </div>
-                        <div class="col-md-12 well well-sm">
-                            <span>Cimitile 80030</span>
-                        </div>
+                    </div>
+                    <div class="col-2 cart_icon_div">
+                        <div class="cart_icon"></div>
+                        <span class="cart_txt_2">Carrello</span>
+                        <span id="nav-cart-count" aria-hidden="true" class="nav-cart-count nav-cart">0</span>                         
                     </div>
                 </div>
             </div>
         </div>
-          <div class="input-group flex-nowrap w-50">
-            <div class="form-sizes">
-                <select class="form-select form-main" aria-label="Disabled select example">
-                    <option selected>Open this select menu</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
-            </div>
-            <input type="text" class="form-control" placeholder="Iphone XS" aria-label="Iphone XS" aria-describedby="addon-wrapping">
-            <div class="input-sizes">
-                <button type="button" class="btn btn-warning input-form-main">
-                    <ion-icon name="search-outline"></ion-icon>
-                </button>
-            </div>
-            </div>
-            
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <div class="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <div class="col-md-9">
-                        <div class="row navbar-info">
-                            <div class="col-md-12 well well-sm">
-                                <span>Ciao Fabio</span>
-                            </div>
-                            <div class="col-md-12 well well-sm">
-                                <span>Account e liste</span>
-                            </div>
-                        </div>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                    <div class="row navbar-info">
-                        <div class="col-md-12 well well-sm">
-                            <span>Resi</span>
-                        </div>
-                        <div class="col-md-12 well well-sm">
-                            <span>e ordini</span>
-                        </div>
-                    </div>
-                  </li>
-                  <li class="nav-item">
-                        <img width="50px" src="assets/images/navbar/cart.png" alt="">
-                        <span style="color: white;">Carrello</span>                            
-                  </li>
-                </ul>
+      </nav>
+      <nav class="second_nav">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-7">
+              <div class="s_nav_links">
+                <a class="s_links" href="basics.html">Amazon basic</a>
+                <a class="s_links" href="#">Bestseller</a>
+                <a class="s_links" href="#">Acquista di nuovo</a>
+                <a class="s_links" href="#">Salute e cura della casa</a>
+                <a class="s_links" href="#">Buoni regalo</a>
               </div>
+            </div>
           </div>
         </div>
-    </nav>
-    <nav class="navbar-sub">
-        <div class="row justify-content-md-center">
-            <div class="col-1">
-                <a>Bestseller</a>
-            </div>
-            <div class="col-1">
-                <a>Offerte</a>
-            </div>
-            <div class="col-1">
-                <a>Amazon Basics</a>
-            </div>               
-            <div class="col-1">
-                <a>Informatica</a>
-            </div>             
-            <div class="col-1">
-                <a>Iscriviti e risparmia</a>
-            </div>             
-            <div class="col-1">
-                <a>Miglioramento casa</a>
-            </div>            
-            <div class="col-1">
-                <a>Bellezza</a>
-            </div>             
-            <div class="col-1">
-                <a>Spedizione Gratuita</a>
-            </div>   
-        </div>          
-    </nav>
+      </nav>
         <img width="100%" src="assets/images/basic/background.jpg" alt="">
     <div>
         <nav class="navbar navbar-expand-lg bg-light">
@@ -247,7 +176,7 @@
             </div>
       </div>
 
-    <footer>
+      <footer>
         <div class="return-top container-fluid">
             <p>Torna su</p>
         </div>
@@ -262,74 +191,166 @@
                     <a>Amazon Science</a>
                 </div>
                 <div class="col col-lg-2 footer-info">
-                    <p> Guadagna con Amazon </p>
-                    <a> Vendi su Amazon </a>
-                    <a> Vendi su Amazon Business </a> 
-                    <a> Vendi su Amazon Handmade </a> 
-                    <a> Diventa affiliato </a> 
-                    <a> Logistica di Amazon </a> 
-                    <a> Pubblica con noi da indipendente </a> 
-                    <a> Promuovi i tuoi prodotti </a> 
-                    <a> Ospita un hub Amazon </a> 
-                    <a> ›Scopri di più su Make Money with Us </a> 
+                    <p>
+                        Guadagna con Amazon
+                    </p>
+                    <a>
+                        Vendi su Amazon
+                    </a>
+                    <a>
+                        Vendi su Amazon Business
+                    </a>
+                    <a>
+                        Vendi su Amazon Handmade
+                    </a>
+                    <a>
+                        Diventa affiliato
+                    </a>
+                    <a>
+                        Logistica di Amazon
+                    </a>
+                    <a>
+                        Pubblica con noi da indipendente
+                    </a>
+                    <a>
+                        Promuovi i tuoi prodotti
+                    </a>
+                    <a>
+                        Ospita un hub Amazon
+                    </a>
+                    <a>
+                        ›Scopri di più su Make Money with Us
+                    </a>
                 </div>
                 <div class="col col-lg-2 footer-info">
-                    <p> Metodi di pagamento Amazon </p>
-                    <a> Metodi di pagamento </a>
-                    <a> Convertitore di Valuta Amazon </a>
-                    <a> Buoni Regalo </a>
-                    <a> Ricarica online </a>
-                    <a> Ricarica in cassa </a>
+                    <p>
+                        Metodi di pagamento Amazon
+                    </p>
+                    <a>
+                        Metodi di pagamento
+                    </a>
+                    <a>
+                        Convertitore di Valuta Amazon
+                    </a>
+                    <a>
+                        Buoni Regalo
+                    </a>
+                    <a>
+                        Ricarica online
+                    </a>
+                    <a>
+                        Ricarica in cassa
+                    </a>
                 </div>
                 <div class="col col-lg-2 footer-info">
-                    <p> Bisogno di aiuto? </p>
-                    <a> Visualizza o traccia un ordine </a>
-                    <a> Costi e modalità di spedizione </a>
-                    <a> Amazon Prime </a>
-                    <a> Restituisci o sostituisci articoli </a>
-                    <a> Riciclo </a>
-                    <a> I miei contenuti e dispositivi </a>
-                    <a> App Amazon Mobile </a>
-                    <a> Amazon Assistant </a>
-                    <a> Servizio Clienti </a>
-                    <a> IVA e fatturazione </a>
-                    <a> Garanzia legale </a>
+                    <p>
+                        Bisogno di aiuto?
+                    </p>
+                    <a>
+                        Visualizza o traccia un ordine
+                    </a>
+                    <a>
+                        Costi e modalità di spedizione
+                    </a>
+                    <a>
+                        Amazon Prime
+                    </a>
+                    <a>
+                        Restituisci o sostituisci articoli
+                    </a>
+                    <a>
+                        Riciclo
+                    </a>
+                    <a>
+                        I miei contenuti e dispositivi
+                    </a>
+                    <a>
+                        App Amazon Mobile
+                    </a>
+                    <a>
+                        Amazon Assistant
+                    </a>
+                    <a>
+                        Servizio Clienti
+                    </a>
+                    <a>
+                        IVA e fatturazione
+                    </a>
+                    <a>
+                        Garanzia legale
+                    </a>
                 </div>
             </div>
         </div>
         <hr>
         <div>
             <div class="footer-icon">
-                <img src="assets/images/footer/logo.png" alt="" srcset="">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1200px-Amazon_logo.svg.png" alt="" srcset="">
             </div>
             <div class="container">
                 <div class="row footer-nationals">
-                    <span class="col-1"> Australia   </span>
-                    <span class="col-1"> Brasile   </span>
-                    <span class="col-1"> Canada  </span>
-                    <span class="col-1"> Cina  </span>
-                    <span class="col-1"> Francia  </span>
-                    <span class="col-1"> Germania  </span>
-                    <span class="col-1"> Giappone  </span>
-                    <span class="col-1"> India  </span>
-                    <span class="col-1"> Messico  </span>
-                    <span class="col-1"> Paesi/Regioni Bassi  </span>
-                    <span class="col-1"> Polonia  </span>
-                    <span class="col-1"> Emirati  </span>
-                    <span class="col-1"> Arabi Uniti  </span>
-                    <span class="col-1"> Regno Unito  </dspaniv>
-                    <span class="col-1"> Spagna  </span>
-                    <span class="col-1"> Singapore  </span>
-                    <span class="col-1"> Stati Uniti  </span>
-                    <span class="col-1"> Turchia  </span>
+                    <span class="col-1">
+                        Australia
+                    </span>
+                    <span class="col-1">
+                        Brasile
+                    </span>
+                    <span class="col-1">
+                        Canada
+                    </span>
+                    <span class="col-1">
+                        Cina
+                    </span>
+                    <span class="col-1">
+                        Francia
+                    </span>
+                    <span class="col-1">
+                        Germania
+                    </span>
+                    <span class="col-1">
+                        Giappone
+                    </span>
+                    <span class="col-1">
+                        India
+                    </span>
+                    <span class="col-1">
+                        Messico
+                    </span>
+                    <span class="col-1">
+                        Paesi/Regioni Bassi
+                    </span>
+                    <span class="col-1">
+                        Polonia
+                    </span>
+                    <span class="col-1">
+                        Emirati
+                    </span>
+                    <span class="col-1">
+                        Arabi Uniti
+                    </span>
+                    <span class="col-1">
+                        Regno Unito
+                    </dspaniv>
+                    <span class="col-1">
+                        Spagna
+                    </span>
+                    <span class="col-1">
+                        Singapore
+                    </span>
+                    <span class="col-1">
+                        Stati Uniti
+                    </span>
+                    <span class="col-1">
+                        Turchia
+                    </span>
                 </div>
             </div>
         </div>
         <div class="footer-end">
             <div class="row justify-content-md-center">
                 <div class="col col-lg-1 navbar-more-info">
-                        <p>Amazon Advertising</p>
-                        <p>Trova, attira e coinvolgi i clienti</p>
+                    <p>Amazon Advertising</p>
+                    <p>Trova, attira e coinvolgi i clienti</p>
                 </div>
                 <div class="col col-lg-1 navbar-more-info">
                     <p>Amazon Music</p>
@@ -340,20 +361,22 @@
                     <p>Libri, arte  & articoli da collezione</p>
                 </div>
                 <div class="col col-lg-1 navbar-more-info">
-                        <p>Amazon Warehouse</p>
-                        <p>I nostri prodotti usati e ricondizionati</p>
+                    <p>Amazon Warehouse</p>
+                    <p>I nostri prodotti usati e ricondizionati</p>
                 </div>
                 <div class="col col-lg-1 navbar-more-info">
-                        <p>Book Depository</p>
-                        <p>Libri con spedizione gratuita in tutto il mondo	 </p>
+                    <p>Book Depository</p>
+                    <p>Libri con spedizione gratuita in tutto il mondo
+                    </p>
                 </div>
                 <div class="col col-lg-1 navbar-more-info">
-                        <p>Kindle Direct Publishing</p>
-                        <p>Pubblica i tuoi libri in formato elettronico</p>
+                    <p>Kindle Direct Publishing</p>
+                    <p>Pubblica i tuoi libri in formato elettronico</p>
                 </div>
             </div>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy" crossorigin="anonymous"></script>
 </body>

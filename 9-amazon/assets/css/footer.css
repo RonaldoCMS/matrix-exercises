@@ -1,15 +1,11 @@
-:root {
-    --color-topdown: #37475A;
-    --color-topdown-hover: #43566b;
-}
 
 footer {
-    background-color: var(--background-sub-navbar);
+    background-color: #232f3e;
     color: #FFF;
 }
 
 .return-top {
-    background-color: var(--color-topdown);
+    background-color: #37475A;
 }
 
 .return-top p {
@@ -21,11 +17,11 @@ footer {
 
 
 .return-top:hover {
-    background-color: var(--color-topdown-hover);
+    background-color: #43566b;
 }
 
 .footer-end {
-    background-color: var(--background-navbar);
+    background-color: #131A22;
     text-align: center;
 }
 
@@ -50,5 +46,5 @@ footer {
 
 .footer-nationals {
     text-align: center;
-    font-size: 0.5em;
+    font-size: 0.8em;
 }

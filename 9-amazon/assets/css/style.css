@@ -1,0 +1,4 @@
+@import "module.css";
+body {
+    background-color: var(--background-body);
+}
